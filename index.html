@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#0e0c0b">
+  <title>For Pakhieee</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main id="app">
+    <section class="screen intro-screen" id="intro">
+      <div class="intro-content">
+        <div class="eyebrow">just for you</div>
+        <h1>Hiii Pakhieee,</h1>
+        <p>there is something for you.......</p>
+        <button class="open-btn" id="startBtn" type="button">
+          <span>open it</span><span class="arrow">→</span>
+        </button>
+      </div>
+    </section>
+
+    <section class="screen envelope-screen hidden" id="envelopeScreen" aria-hidden="true">
+      <div class="desk-glow"></div>
+      <div class="envelope-wrap" id="envelopeWrap">
+        <button class="envelope" id="envelopeBtn" aria-label="Open the envelope" type="button">
+          <div class="envelope-back"></div>
+          <div class="letter-tease"></div>
+          <div class="envelope-front"></div>
+          <div class="envelope-flap"></div>
+          <div class="seal">P</div>
+        </button>
+        <div class="envelope-label">for my Pakhieee</div>
+        <div class="tap-hint">tap the envelope</div>
+      </div>
+    </section>
+
+    <section class="screen words-screen hidden" id="wordsScreen" aria-hidden="true">
+      <div class="word-stage" id="wordStage"></div>
+    </section>
+
+    <section class="screen letter-screen hidden" id="letterScreen" aria-hidden="true">
+      <div class="letter-stage">
+        <div class="paper-stack">
+          <img id="letterImage" class="letter-image" src="assets/letter-1.jpg" alt="My handwritten letter to Pakhieee">
+        </div>
+
+        <div class="letter-controls" id="letterControls">
+          <button id="prevBtn" type="button" aria-label="Previous page">←</button>
+          <span id="pageCount">1 / 1</span>
+          <button id="nextBtn" type="button" aria-label="Next page">→</button>
+        </div>
+
+        <div class="final-message">
+          <p>I could have typed this.</p>
+          <p>But I wanted you to see my handwriting.</p>
+          <span>— with love</span>
+        </div>
+
+        <button class="music-btn" id="musicBtn" type="button" aria-label="Play music">♪</button>
+        <audio id="music" src="assets/song.mp3" preload="none"></audio>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
