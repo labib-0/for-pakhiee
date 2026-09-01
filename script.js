@@ -37,10 +37,18 @@ startBtn.addEventListener("click", () => {
   show(envelopeScreen);
 });
 
-envelopeBtn.addEventListener("click", () => {
+envelopeBtn.addEventListener("click", async () => {
   if (envelopeWrap.classList.contains("opening")) return;
 
   envelopeWrap.classList.add("opening");
+
+  // Start the song immediately when she opens the envelope
+  try {
+    music.currentTime = 0;
+    await music.play();
+  } catch (error) {
+    console.log("Music could not autoplay:", error);
+  }
 
   setTimeout(() => {
     hide(envelopeScreen);
